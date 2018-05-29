@@ -1,13 +1,12 @@
 ---
 layout: post
 title:      "CLI Gem Project - Urgent Care Web Scraper"
-date:       2018-05-29 16:17:53 +0000
+date:       2018-05-29 12:17:54 -0400
 permalink:  cli_gem_project_-_urgent_care_web_scraper
 ---
 
-
-	        My first project in Ruby is a CLI application that scrapes the website of a company that provides urgent care. Urgent care is provided to patients that typically cannot wait until the next business day but are not experiencing an illness or injury that is life threatening. Many urgent care centers are located throughout Massachusetts to treat patients and prevent long wait times in the Emergency Department. My application lists the next available appointment time at urgent care centers in Massachusetts based on location. This provides a quick and easy way to find care.
-	     The biggest challenge when coding this project was to find the best way to organize the Scraper class. This class scrapes the website for the desired data and stores it in a separate Office class. All of the relevant data that I wanted was located under the node of ('.et_pb_column_1_4'). However, the relevant data for each office was located in two different ('.et_pb_column_1_4'). This required separating each ('.et_pb_column_1_4') into two separate arrays and then zipping them together in order to form one office_details array where each element contains the relevant data for each office. 
+      My first project in Ruby is a CLI application that scrapes the website of a company that provides urgent care. Urgent care is provided to patients that typically cannot wait until the next business day but are not experiencing an illness or injury that is life threatening. Many urgent care centers are located throughout Massachusetts to treat patients and prevent long wait times in the Emergency Department. My application lists the next available appointment time at urgent care centers in Massachusetts based on location. This provides a quick and easy way to find care.
+		 The biggest challenge when coding this project was to find the best way to organize the Scraper class. This class scrapes the website for the desired data and stores it in a separate Office class. All of the relevant data that I wanted was located under the node of ('.et_pb_column_1_4'). However, the relevant data for each office was located in two different ('.et_pb_column_1_4'). This required separating each ('.et_pb_column_1_4') into two separate arrays and then zipping them together in order to form one office_details array where each element contains the relevant data for each office. 
 			 
 			 `def get_clinics
     url_array = []
