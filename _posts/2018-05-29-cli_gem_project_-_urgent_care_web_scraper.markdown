@@ -30,10 +30,10 @@ end
 After getting past this barrier, scraping from each element of the office_details array was simpler. The next challenge was discovering that the Next Available Appointment Time data that I wanted on the second page was contained within an iframe. This required scraping the link for the individual office page, then the iframe link, and then the appointment time data. 
 				
 			
-		doc_d = Nokogiri::HTML(open("https://www.carewellurgentcare.com#{office.url}"));
+		```doc_d = Nokogiri::HTML(open("https://www.carewellurgentcare.com#{office.url}"));
     doc_i = doc_d.css('.locat').attr('src').text;
     doc_n = Nokogiri::HTML(open(doc_i.to_s));
-    office.next_available = doc_n.css('.panel-heading').text.strip.gsub("\r\n", ' ').split(',')[0];
+    office.next_available = doc_n.css('.panel-heading').text.strip.gsub("\r\n", ' ').split(',')[0]; ```
 		
 		
 While challenging, these obstacles taught me the importance of proper planning in order to return exactly the data that you are looking for.
