@@ -12,6 +12,7 @@ This application allows patients to log in to view their medical history and act
 
 Validating the data entered into the database and ensuring that only physicians have editing access were big challenges for this project. 
 
+
 ```
   validates :username, :presence => true, :uniqueness => true
   validates :npi, :presence => true, :uniqueness => true, length: { minimum: 10 }
@@ -19,9 +20,11 @@ Validating the data entered into the database and ensuring that only physicians 
 	
 ```
 
+
 The above code was entered into the physician model. This way every new physician entry must have a unique username, password, and an NPI number. The NPI number is a unique number that physicians have for their work. 
 
 I included a helper method that will tell whether a physician is the current application user:
+
 ```
 def physician_current_user
 		  if session[:id]
@@ -30,5 +33,6 @@ def physician_current_user
 		end
   end
 ```
+
 
 This method checks whether it is a physician logged in for routes that allow editing and creating patients. This protects the integrity of the data and improves the user experience by only showing the user links and fields that are relevant to them. 
