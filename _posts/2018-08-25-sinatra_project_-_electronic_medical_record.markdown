@@ -23,16 +23,16 @@ Validating the data entered into the database and ensuring that only physicians 
 
 The above code was entered into the physician model. This way every new physician entry must have a unique username, password, and an NPI number. The NPI number is a unique number that physicians have for their work. 
 
-I included a helper method that will tell whether a physician is the current application user:
+I included a helper method that will tell whether a user is currently logged in:
 
 ```
-def physician_current_user
-		  if session[:id]
-			  Physician.find(session[:id])
-			end
+helpers do
+		def logged_in?
+			session[:id] != nil
 		end
   end
+
 ```
 
 
-This method checks whether it is a physician logged in for routes that allow editing and creating patients. This protects the integrity of the data and improves the user experience by only showing the user links and fields that are relevant to them. 
+This method checks whether it a user is logged in for pages only to be viewed by users. Pages to allow editing and creating patients are only accessible due to code that checks is the current session id is equal to the physician id. This protects the integrity of the data and improves the user experience by only showing the user links and fields that are relevant to them. 
