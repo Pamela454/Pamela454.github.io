@@ -1,11 +1,11 @@
 ---
 layout: post
 title:      "Hoisting and Scope for Beginners "
-date:       2019-08-16 21:13:26 +0000
+date:       2019-08-16 17:13:27 -0400
 permalink:  hoisting_and_scope_for_beginners
 ---
 
-                     There are two concepts that are imporatant to be familiar with when first learning to code in Javascript. Misinterpreting them can cause you some frustration when searching for errors in your code. 
+                     There are two concepts that are important to be familiar with when first learning to code in Javascript. Misinterpreting them can cause you some frustration when searching for errors in your code. 
 										 
                      Scope are the variables and functions available for use within the current execution context. The execution context is the environment in which the code is being run.  In Javascript the scope could be the global scope, the function scope, or the block scope.  Variables declared in the global scope are accessible anywhere throughout the code. Within an execution context, when a variable is referenced, that context can look further up the scope chain to find the declaration of the variable. So a function within a function can search both the outer function and the global scope. Keep this in mind when trying to access values stored in variables. A reference error may indicate that the variable was declared and assigned, just not accessible within your current scope. 
 										 
